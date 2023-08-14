@@ -28,15 +28,18 @@ To integrate the jQuery i18n Language Switcher, follow the instructions below.
 ```html
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="path/to/jquery.i18n.js"></script>
-
-Call the i18n function on the desired input element with the required configuration:
+```
+2. Call the i18n function on the desired input element with the required configuration:
+```javascript
 $('input-selector').i18n({
     attribute: 'name', // custom attribute name (default is 'name')
 });
+```
+3. You can also customize the locales by adding the data-i18n attribute to the HTML elements:
 
-You can also customize the locales by adding the data-i18n attribute to the HTML elements:
+```html
 <input type="text" data-i18n="en,ar" class="i18n-input" />
-
+```
 Customizing CKEditor
 If the input has a class of 'ckeditor', the plugin will initialize CKEditor on that input. Ensure that the CKEditor script is included in your project for this to work.
 
