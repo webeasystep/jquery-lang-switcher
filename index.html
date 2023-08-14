@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery i18n Language Switcher Examples</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1>jQuery i18n Language Switcher Examples</h1>
+
+    <!-- Example 1: Text Input -->
+    <div class="form-group i18n-input">
+        <label >Text Input add mode:</label>
+        <input type="text" name="title"  id="title" class="form-control" data-i18n="ar,en">
+    </div>
+
+    <!-- Example 2: Text Input -->
+
+    <div class="form-group i18n-input">
+        <label >Text Input Edit mode:</label>
+        <input type="text" name="job_title" data-i18n="ar,en" data-ar="البيانات في وضع التعديل"
+               data-en="edit mode data in en"
+               id="job_title"
+               class="form-control">
+    </div>
+
+    <!-- Example 3: Textarea -->
+    <div class="form-group i18n-input">
+        <label >Textarea:</label>
+        <textarea name="address2" class="form-control" id="address2"
+                  data-i18n="ar,en" data-ar="عنوان عربي"
+                  data-en="ENGLISH ADDRESS">
+         </textarea>
+    </div>
+
+    <!-- Example 4: CKEditor 5 -->
+    <div class="form-group  ">
+        <div class="i18n-input">
+                <textarea name="address"  class="form-control ckeditor " id="address" data-i18n="ar,en"
+                          data-ar="عنوان عربي"
+                          data-en="ENGLISH ADDRESS" ></textarea>
+            <small class="invalid-feedback"></small>
+        </div>
+    </div>
+
+
+
+</div>
+
+<!-- Include jQuery and CKEditor scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/38.1.1/classic/ckeditor.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/38.1.1/classic/translations/ar.js"></script>
+<!-- Include your i18n script -->
+<script src="./i18n.js"></script>
+<!-- Initialize the i18n script -->
+<script>
+    $(document).ready(function () {
+        // Initialize i18n on text input
+        $('[data-i18n]').i18n();
+    });
+</script>
+
+</body>
+</html>
